@@ -1,4 +1,8 @@
-﻿void PrintArray(string[] array)
+﻿// Написать программу, которая из имеющегося массива строк формирует массив из строк, 
+// длина которых меньше либо равна 3 символа. Первоначальный массив можно ввести с клавиатуры, 
+// либо задать на старте выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями,
+// лучше обойтись исключительно массивами.
+void PrintArray(string[] array)
 {
    for(int i = 0;i < array.GetLength(0)-1;i++ )
      {
@@ -27,13 +31,13 @@ void CopyNumber3_2_1Array(string[] array,string[]arrayCopy)
         }
 }      
 Console.Write("enter the number of array elements: ");
-int index = 0;
 int rows = int.Parse(Console.ReadLine()?? "");
 string[]inputArray = new string[rows];
 string[]outputArray = new string[rows];
 FillArray(inputArray);
 Console.WriteLine("output the entered array:");
 PrintArray(inputArray);
+int index = 0;
 foreach (string Element in inputArray) 
     if (Element.Length < 4)
         index++;
